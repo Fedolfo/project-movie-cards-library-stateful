@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import React from 'react';
 import PropTypes from 'prop-types';
 
@@ -8,10 +9,11 @@ class SearchBar extends React.Component {
       onBookmarkedChange, selectedGenre, onSelectedGenreChange,
     } = this.props;
     return (
-      <form action="#" data-testid="search-bar-form">
+      <form action="#" data-testid="search-bar-form" className="main-form-searchBar mb-3">
         <label htmlFor="searchText" data-testid="text-input-label">
-          Inclui o texto
+          Filtre por nome:
           <input
+            className="form-control"
             type="text"
             name="searchText"
             id="searchText"
@@ -20,9 +22,10 @@ class SearchBar extends React.Component {
             data-testid="text-input"
           />
         </label>
-        <label htmlFor="bookmarkedOnly" data-testid="checkbox-input-label">
+        <label htmlFor="bookmarkedOnly" data-testid="checkbox-input-label" className="mb-3 form-check-label form-check">
           Mostrar somente favoritos
           <input
+            className="form-check-input"
             type="checkbox"
             name="bookmarkedOnly"
             id="bookmarkedOnly"
@@ -31,9 +34,10 @@ class SearchBar extends React.Component {
             data-testid="checkbox-input"
           />
         </label>
-        <label htmlFor="selectedGenre" data-testid="select-input-label">
-          Filtrar por gênero
+        <label htmlFor="selectedGenre" data-testid="select-input-label" className="mb-3">
+          Filtrar por gênero:
           <select
+            className="form-select"
             name="selectedGenre"
             id="selectedGenre"
             value={ selectedGenre }

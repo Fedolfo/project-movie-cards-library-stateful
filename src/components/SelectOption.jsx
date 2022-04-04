@@ -5,11 +5,16 @@ class SelectOption extends React.Component {
   render() {
     const { value, onChange } = this.props;
     return (
-      <label htmlFor="genre" data-testid="genre-input-label">
-        Gênero
+      <label
+        htmlFor="genre"
+        className="form-label"
+        data-testid="genre-input-label"
+      >
+        Gênero:
         <select
           name="genre"
           id="genre"
+          className="form-select"
           value={ value }
           onChange={ onChange }
           data-testid="genre-input"

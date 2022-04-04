@@ -5,7 +5,12 @@ class ButtonSubmit extends React.Component {
   render() {
     const { onClick } = this.props;
     return (
-      <button type="submit" data-testid="send-button" onClick={ onClick }>
+      <button
+        type="submit"
+        className="btn btn-primary"
+        data-testid="send-button"
+        onClick={ onClick }
+      >
         Adicionar filme
       </button>
     );

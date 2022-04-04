@@ -5,13 +5,18 @@ class StorylineInput extends React.Component {
   render() {
     const { value, onChange } = this.props;
     return (
-      <label htmlFor="storyline" data-testid="storyline-input-label">
-        Sinopse
+      <label
+        htmlFor="storyline"
+        className="form-label"
+        data-testid="storyline-input-label"
+      >
+        Sinopse:
         <textarea
           name="storyline"
           id="storyline"
           cols="30"
           rows="10"
+          className="form-control"
           value={ value }
           onChange={ onChange }
           data-testid="storyline-input"

@@ -5,8 +5,12 @@ class RatingInput extends React.Component {
   render() {
     const { value, onChange } = this.props;
     return (
-      <label htmlFor="rating" data-testid="rating-input-label">
-        Avaliação
+      <label
+        htmlFor="rating"
+        className="form-label"
+        data-testid="rating-input-label"
+      >
+        Avaliação:
         <input
           type="number"
           name="rating"
@@ -16,6 +20,7 @@ class RatingInput extends React.Component {
           step="0.1"
           value={ value }
           onChange={ onChange }
+          className="form-control"
           data-testid="rating-input"
         />
       </label>

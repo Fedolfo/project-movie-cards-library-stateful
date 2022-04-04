@@ -5,11 +5,16 @@ class ImagePathUrl extends React.Component {
   render() {
     const { value, onChange } = this.props;
     return (
-      <label htmlFor="imagePath" data-testid="image-input-label">
+      <label
+        htmlFor="imagePath"
+        className="form-label"
+        data-testid="image-input-label"
+      >
         Imagem:
         <input
           type="text"
           name="imagePath"
+          className="form-control"
           id="imagePath"
           value={ value }
           onChange={ onChange }

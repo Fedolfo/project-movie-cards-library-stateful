@@ -9,8 +9,10 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <Header />
-      <MovieLibrary movies={ data } />
+      <React.StrictMode>
+        <Header />
+        <MovieLibrary movies={data} />
+      </React.StrictMode>
     </div>
   );
 }

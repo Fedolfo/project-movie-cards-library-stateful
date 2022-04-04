@@ -26,7 +26,6 @@ class MovieLibrary extends Component {
   }
 
   addNewMovie = (newMovies) => {
-    // console.log(newMovies);
     const { movies } = this.state;
     this.setState({ movies: [...movies, newMovies] });
   }
@@ -53,8 +52,7 @@ class MovieLibrary extends Component {
   render() {
     const { searchText, bookmarkedOnly, selectedGenre } = this.state;
     return (
-      <div>
-        <h2> My awesome movie library </h2>
+      <div className="main-movie-library">
         <SearchBar
           searchText={ searchText }
           onSearchTextChange={ this.handleChange }
